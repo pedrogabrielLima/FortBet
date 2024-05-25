@@ -40,6 +40,11 @@
             width: 100%;
             max-width: 400px;
         }
+        .fighter .caption {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
         .odds {
             position: absolute;
             top: 50%;
@@ -60,10 +65,16 @@
         }
         .content-section {
             padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(to bottom, yellow, gray);
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
         }
         .content-section img {
             float: right;
-            max-width: 600px;
+            max-width: 100%;
             margin: 0 0 10px 20px;
         }
         .button-section {
@@ -92,6 +103,10 @@
                 font-size: 60px;
                 margin: 20px 0;
             }
+            .content-section img {
+                float: none;
+                margin: 10px auto;
+            }
         }
     </style>
 </head>
@@ -104,34 +119,36 @@
 </nav>
 
 <header>
-    <h1>FortBet</h1>
+    <h1>FortBet apresenta: MMA Fighters</h1>
 </header>
 
 <section class="image-section" id="fighters">
     <div class="fighter">
         <img src="rdrg.jpeg" alt="Fighter 1 preparing to fight">
         <div class="odds left-odds">Odds: 2.5</div>
+        <div class="caption">Rodrigo</div>
     </div>
     <div class="shining-x">X</div>
     <div class="fighter">
         <img src="vitinho.jpeg" alt="Fighter 2 preparing to fight">
-        <div class="odds right-odds">Odds: 1.2</div>
+        <div class="odds right-odds">Odds: 1.8</div>
+        <div class="caption">Vitinho</div>
     </div>
 </section>
 
-<!--<section class="content-section" id="history">
-    <img src="tyson-ali.jpg" alt="Mike Tyson and Muhammad Ali">
+<section class="content-section" id="history">
+    <!--<img src="tyson-ali.jpg" alt="Mike Tyson and Muhammad Ali">
     <p>Mike Tyson and Muhammad Ali, two of the greatest boxers in history, in a rare meeting.</p>
     <h2>Section 1</h2>
     <p>MMA, or Mixed Martial Arts, is a full-contact combat sport that allows a wide variety of fighting techniques and skills. This history section covers the origins and development of MMA over the years.</p>
     <h2>Section 2</h2>
     <p>The sport of MMA has evolved significantly since its early days, with different fighting styles coming together to create the modern form of competition we see today.</p>
-    <h2>Section 3</h2>
-    <p>Notable fighters, events, and organizations have contributed to the growth and popularity of MMA, making it a global phenomenon with millions of fans worldwide.</p>
-</section>-->
+    <h2>Section 3</h2>-->
+    <p>FAÇAM SUAS APOSTAS, O CANAL COMBATE TRANSMITIRÁ ESTE EMBATE AO VIVO, NÃO PERCAM!</p>
+</section>
 
 <section class="button-section" id="buttons">
-    <h2>Ouça a análise do especialistas</h2>
+    <h2>Ouça a análise dos especialistas</h2>
     <button onclick="playAudio('audio1')">Especialista 1</button>
     <button onclick="playAudio('audio2')">Especialista 2</button>
     <audio id="audio1" src="vai_ganhar_vai_perder.mp3"></audio>
