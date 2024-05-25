@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortBet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        .image-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            margin: 20px;
+        }
+        .fighter {
+            position: relative;
+            text-align: center;
+        }
+        .fighter img {
+            width: 100%;
+            max-width: 400px;
+        }
+        .odds {
+            position: absolute;
+            top: 50%;
+            width: 100px;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #000;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: rgb(13, 0, 255);
+            text-shadow: 0 0 10px rgba(255, 223, 0, 0.8), 0 0 20px rgba(255, 223, 0, 0.8), 0 0 30px rgba(255, 223, 0, 0.8), 0 0 40px rgba(255, 223, 0, 0.8);
+        }
+        .shining-x {
+            font-size: 100px;
+            color: gold;
+            text-shadow: 0 0 10px rgba(2, 2, 2, 0.8), 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 4, 59, 0.8), 0 0 40px rgba(14, 11, 32, 0.8);
+            margin: 0 20px;
+        }
+        .content-section {
+            padding: 20px;
+        }
+        .content-section img {
+            float: right;
+            max-width: 600px;
+            margin: 0 0 10px 20px;
+        }
+        .button-section {
+            text-align: center;
+            margin: 20px;
+        }
+        .button-section button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .button-section button:hover {
+            background-color: darkblue;
+        }
+        @media (max-width: 768px) {
+            .image-section {
+                flex-direction: column;
+            }
+            .shining-x {
+                font-size: 60px;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#fighters">Lutadores</a>
+    <a href="#buttons">Comentários dos especialistas</a>
+    <!--<a href="#history">History</a>-->
+</nav>
+
+<header>
+    <h1>FortBet</h1>
+</header>
+
+<section class="image-section" id="fighters">
+    <div class="fighter">
+        <img src="rdrg.jpeg" alt="Fighter 1 preparing to fight">
+        <div class="odds left-odds">Odds: 2.5</div>
+    </div>
+    <div class="shining-x">X</div>
+    <div class="fighter">
+        <img src="vitinho.jpeg" alt="Fighter 2 preparing to fight">
+        <div class="odds right-odds">Odds: 1.2</div>
+    </div>
+</section>
+
+<!--<section class="content-section" id="history">
+    <img src="tyson-ali.jpg" alt="Mike Tyson and Muhammad Ali">
+    <p>Mike Tyson and Muhammad Ali, two of the greatest boxers in history, in a rare meeting.</p>
+    <h2>Section 1</h2>
+    <p>MMA, or Mixed Martial Arts, is a full-contact combat sport that allows a wide variety of fighting techniques and skills. This history section covers the origins and development of MMA over the years.</p>
+    <h2>Section 2</h2>
+    <p>The sport of MMA has evolved significantly since its early days, with different fighting styles coming together to create the modern form of competition we see today.</p>
+    <h2>Section 3</h2>
+    <p>Notable fighters, events, and organizations have contributed to the growth and popularity of MMA, making it a global phenomenon with millions of fans worldwide.</p>
+</section>-->
+
+<section class="button-section" id="buttons">
+    <h2>Ouça a análise do especialistas</h2>
+    <button onclick="playAudio('audio1')">Especialista 1</button>
+    <button onclick="playAudio('audio2')">Especialista 2</button>
+    <audio id="audio1" src="vai_ganhar_vai_perder.mp3"></audio>
+    <audio id="audio2" src="jaganhou.mp3"></audio>
+</section>
+
+<script>
+    function playAudio(id) {
+        var audios = document.querySelectorAll('audio');
+        audios.forEach(function(audio) {
+            if (audio.id !== id) {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        });
+        document.getElementById(id).play();
+    }
+</script>
+
+</body>
+</html>
